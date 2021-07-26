@@ -1,7 +1,104 @@
+// Desafio
 {
   "store.search": {
     "blocks": [
-      
+      "search-result-layout"
+    ]
+  },
+  "search-result-layout": {
+    "blocks": [
+      "search-result-layout.desktop",
+      "search-result-layout.mobile",
+      "search-not-found-layout"
+    ]
+  },
+  "search-result-layout.desktop": {
+    "children": [
+      "breadcrumb.search",
+      "search-title.v2",
+      "flex-layout.row#main"
+    ]
+  },
+  "flex-layout.row#main": {
+    "props": {
+      "marginTop": 6
+    },
+    "children": [
+      "flex-layout.col#filters",
+      "flex-layout.col#search-results"
+    ]
+  },
+  "flex-layout.col#filters": {
+    "children": [
+      "filter-navigator.v3"
+    ],
+    "props": {
+      "width": "10%"
+    }
+  },
+  "flex-layout.col#search-results": {
+    "children": [
+      "flex-layout.row#results-control",
+      "flex-layout.row#results"
+    ],
+    "props": {
+      "width": "90%"
+    }
+  },
+  "flex-layout.row#results-control": {
+    "children": [
+      "flex-layout.col#results-number",
+      "flex-layout.col#results-order"
+    ]
+  },
+  "flex-layout.col#results-number": {
+    "children": [
+      "total-products.v2"
+    ]
+  },
+  "flex-layout.col#results-order": {
+    "children": [
+      "order-by.v2"
+    ]
+  },
+  "order-by.v2": {
+    "props": {
+      "float": "right"
+    }
+  },
+  "flex-layout.row#results": {
+    "children": [
+      "search-content"
     ]
   }
 }
+
+// Curso normal
+/*
+{
+  "store.search": {
+    "blocks": [
+      "search-result-layout"
+    ]
+  },
+  "search-result-layout": {
+    "blocks": [
+      "search-result-layout.desktop",
+      "search-result-layout.mobile",
+      "search-not-found-layout"
+    ]
+  },
+  "search-result-layout.desktop": {
+    "children": [
+      "breadcrumb.search",
+      "search-title.v2",
+      "total-products.v2",
+      "order-by.v2",
+      "search-fetch-previous",
+      "search-content",
+      "filter-navigator.v3",
+      "search-fetch-more"
+    ]
+  }
+}
+*/
